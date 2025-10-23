@@ -13,23 +13,6 @@ User: "What's the best way to get Python?"  [HIT → Return cached answer]
 
 **Result**: 70-90% cache hit rate, 80%+ cost savings, <50ms latency
 
-## ⚡ Quick Start (2 Minutes)
-
-```bash
-# 1. Get Groq API key (free): https://console.groq.com
-# 2. Start Redis
-docker-compose up -d
-
-# 3. Install dependencies
-pip install -r llm-semantic-cache/requirements.txt
-
-# 4. Configure
-echo "GROQ_API_KEY=gsk_your_key_here" > .env
-
-# 5. Test it!
-python main.py
-```
-
 ## 📊 Key Metrics
 
 | Metric | Target | Achieved |
@@ -77,7 +60,7 @@ docker-compose up -d
 ### 3. Install Dependencies
 
 ```bash
-pip install -r semantic_cache/requirements.txt
+pip install -r src/semantic_cache/requirements.txt
 ```
 
 ### 4. Configure Environment
@@ -102,23 +85,10 @@ CACHE_SIMILARITY_THRESHOLD=0.85
 ```bash
 python main.py
 ```
+Output:
 
-Expected output:
-```
-DEMO 1: Basic Semantic Caching
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Query 1: What is Python programming?
-✗ MISS | Latency: 125ms → LLM Call
-
-Query 2: How do I learn Python?
-✓ HIT  | Similarity: 0.89 | Latency: 23ms | Tokens Saved: 85
-
-Agent Statistics:
-  Hit Rate: 75%
-  Tokens Saved: 340
-  💰 Cost Savings: ~75%
-```
+![query_output](./img/output1.png)
+![semantics_output](./img/output2.png)
 
 ## 🧪 Testing
 
