@@ -51,7 +51,7 @@ python main.py
 
 ## 🏗️ Architecture
 
-![Architecture Diagram](./images/design.png)
+![Architecture Diagram](./img/design.png)
 
 ## 🚀 Quick Start
 
